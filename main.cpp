@@ -20,9 +20,9 @@ public:
 
     // hash function
     int hashFunc(string key) {
-        int hash = 0;
+        int hash = 1;
         for (int i = 0; i < key.length(); i++) {
-            hash += (int)key[i];
+            hash = hash + hash*(int)key[i];
         }
         return hash % size;
     }
